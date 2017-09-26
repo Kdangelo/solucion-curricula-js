@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 2</title>
+</head>
+<body>
+	<div id="divmsg"></div>
+</body>
+<script type="text/javascript">
+	
+var ceviche=true;
+var tacos=true;
+var empanada=true;
+var mensaje;
+
+if(ceviche){
+	mensaje = "A comer ceviche!!";
+}else if (tacos){
+	mensaje = "Bueno, no está mal unos tacos al pastor";
+}else if (empanada){
+	mensaje = "Ok, entonces una empanada";
+}else{
+	mensaje = "Cagamos, a comer hamburguesa!! :(";
+}
+
+// Esto es para que se dibuje dentro de la pagina y no hablas la consola
+document.getElementById('divmsg').innerHTML=mensaje;
+
+// Aca igual lo imprimimos en la consola
+console.log(mensaje);
+</script>
+</html>

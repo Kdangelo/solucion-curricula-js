@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 3</title>
+</head>
+<body>
+	<!-- Div para poner los mensajes -->
+	<div id="divmsg"></div>
+</body>
+
+<script type="text/javascript">
+	function getTipoEdad(edad){
+		var msg;
+		if(edad > 0){
+			if (edad <= 1) {
+				msg= "Toddler";
+			}else if(edad >1 && edad <= 3){
+				msg="Preschooler";
+			}else if(edad >3 && edad <= 5){
+				msg="Gradeschooler";
+			}else if(edad >5 && edad <= 12){
+				msg="Tennager";
+			}else if(edad >12 && edad <= 18){
+				msg="Young adult";
+			}else if(edad >18){
+				msg="Adult";
+			}
+		}else{
+			msg = "Aun no naces!!";
+		}
+		return msg;
+	}
+	var edad = prompt("Ingresa la edad:");
+	var msg;
+	
+	if(edad != null){
+		if(Number.isInteger(edad*1)){
+			msg = "Ingresaste "+edad+ " y corresponde a "+getTipoEdad(edad*1);
+		}else{
+			msg = "El valor ingresado no es un numero entero.";
+		}
+	}else{
+		msg = "Debes ingresar una edad";
+	}
+
+// Esto es para que se dibuje dentro de la pagina y no hablas la consola
+	document.getElementById('divmsg').innerHTML=msg;
+</script>
+</html>
